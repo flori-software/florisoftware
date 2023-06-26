@@ -1,0 +1,175 @@
+@font-face {
+	font-family: 'NothingYouCouldDo';
+	src: url('fonts/Nothing_You_Could_Do/NothingYouCouldDo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'QuicksandLight';
+	src: url('fonts/Quicksand/static/Quicksand-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'QuicksandRegular';
+	src: url('fonts/Quicksand/static/Quicksand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'QuicksandSemiBold';
+	src: url('fonts/Quicksand/static/Quicksand-SemiBold.ttf') format('truetype');
+}
+
+body {
+	background-color:lightgoldenrodyellow;
+	align-content: center;
+	font-family: Helvetica;
+}
+.mittelteil {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 0px;
+	width: 90%;
+	border-radius: 0px 0px 20px 20px;
+	background-color: khaki;
+	align-content: center;
+	font-family: Trebuchet MS, Helvetica;
+	font-size: 14px;
+}
+.titelbild {
+	width: 100%;
+}
+.menupunkt {
+	width: 11%;
+}
+.inhalt {
+	padding: 10px;
+}
+.login {
+	text-align: right;
+}
+
+.flori_software_schrift {
+	font-family: NothingYouCouldDo;
+	font-size: 150px;
+	color: white;
+	font-weight: lighter;
+	position: absolute;
+	top: 100px;
+	left: 150px;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: darkred;
+}
+a:hover, a:active {
+	color: olive;
+}
+
+a.menu:link, a.menu:visited {
+	font-family: QuicksandRegular;
+	font-size: 150%;
+	text-decoration: none;
+	color: darkred;
+	padding: 8px 15px;
+	text-align: center;
+	display: inline-block;
+}
+a.menu:hover, a.menu:active {
+	background-color: darkred;
+	color: white;
+}
+
+input {
+	border: 0px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding: 5px;
+	height: 20px;
+	font-size: 12px;
+	font-weight: lighter;
+
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+
+	-moz-box-shadow: 3px 3px 10px #000;
+	-webkit-box-shadow: 3px 3px 10px #000;
+	box-shadow: 3px 3px 10px #000;
+}
+
+input.checkbox {
+	border: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	height: 15px;
+
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+
+	-moz-box-shadow: 0px 0px 0px #000;
+	-webkit-box-shadow: 0px 0px 0px #000;
+	box-shadow: 0px 0px 0px #000;
+
+}
+select {
+	border: 0px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding: 5px;
+	height: 20px;
+	font-size: 12px;
+	font-weight: lighter;
+
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+
+	-moz-box-shadow: 3px 3px 10px #000;
+	-webkit-box-shadow: 3px 3px 10px #000;
+	box-shadow: 3px 3px 10px #000;
+}
+
+.nachricht {
+	font-size: 36px;
+	font-weight: lighter;
+}
+
+.downloadbutton {
+	background-color: darkred;
+	border-radius: 20px;
+	height: 30px;
+	color: white;
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+}
+
+.zeile_orange:hover {
+    background-color: orange;
+}
+
+
+
+.titeltext {
+	font-family: QuicksandSemibold;
+	font-size: 180%;
+}
+
+.titeltext_klein {
+	font-family: QuicksandSemibold;
+	font-size: 160%;
+}
+
+.normaler_text {
+	font-family: QuicksandLight;
+	font-size: 150%;
+}
+
+#zeile_weiss:hover {
+    background-color: white;
+}
