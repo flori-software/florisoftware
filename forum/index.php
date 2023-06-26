@@ -1,8 +1,13 @@
 <?php
+include "../klassen/FUNCTIONS.php";
 session_start();
-$id_mitarbeiter  = $_GET["id_mitarbeiter"] ?? 0;
-$kundennummer    = $_GET["kundennummer"] ?? 0;
-$mitarbeitername = $_GET["mitarbeitername"] ?? 0;
+$id_mitarbeiter  = GetMyVar("id_mitarbeiter", SessionMyVar("id_mitarbeiter", 0));
+$kundennummer    = GetMyVar("kundennummer", SessionMyVar("kundennummer", 0));
+$mitarbeitername = GetMyVar("mitarbeitername", SessionMyVar("mitarbeitername", ""));
+
+$_SESSION["id_mitarbeiter"]  = $id_mitarbeiter;
+$_SESSION["kundennummer"]    = $kundennummer;
+$_SESSION["mitarbeitername"] = $mitarbeitername;
 
 function ausgang() {
     echo '<script>
@@ -30,6 +35,10 @@ switch ($kundennummer) {
     case '6':
         $url = "hobs-gabriel.work";
     break;
+
+    case '7':
+        $url = "localhost";
+    break;
 }
 
 if($id_mitarbeiter == 0 || $kundennummer == 0 || $mitarbeitername == 0) {
@@ -44,7 +53,16 @@ if($id_mitarbeiter == 0 || $kundennummer == 0 || $mitarbeitername == 0) {
         ausgang();
     } else {
         // Geschützter Bereich
-        echo 'Herzlich Willkommen';
+        echo '<html>
+        <head>
+        <link rel="stylesheet" type="text/css" href="../beauty.css">
+        </head>
+        <div style="text-align: center;">
+        Herzlich Willkommen!<br>
+        Hier k&ouml;nnen Sie alle Videotutoriale anschauen, aber auch Fragen stellen und mit anderen Benutzern diskutieren.<br>
+        Wenn Sie weitere Hilfe ben&ouml;tigen, z&ouml;gern Sie nicht den Hersteller der Software anzurufen: 0176 642 755 72. 
+        </div>
+        </html>';
     }
 }
 
