@@ -1,4 +1,0 @@
-<Files "*.mp4">
-  Order deny,allow
-  Allow from all
-</Files>
