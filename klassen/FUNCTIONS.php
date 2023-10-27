@@ -1,10 +1,10 @@
 <?php
 
 function MyDatabase() {
-	$mysqli=new mysqli("localhost","floricica","DerHerrHatsGegebenDerHerrHatsGenommen","floricica");
+	$mysqli=new mysqli("localhost","d03e8079","FreudeAmHerrnWirdDichHeilen","d03e8079");
 	if (mysqli_connect_errno()) {
-    	printf("Es konnte keine Verbindung zur Datenbank aufgebaut werden<p>", mysqli_connect_error());
-    	exit();
+		printf("Es konnte keine Verbindung zur Datenbank aufgebaut werden<p>", mysqli_connect_error());
+		exit();
 	}
 	return $mysqli;
 }
@@ -48,7 +48,6 @@ function NotEmptyMyVar($x,$y) {
 // Die Ueberpruefung ob der Wert "leer" (aber nicht NULL) ist, ist z.B. fuer Datumsfelder von Bedeutung, welche im Falle, dass sie einen "leeren" Wert haben den Wert 0000-00-00 bekommen müssen
 
 function PostMyVar($x, $leer, $unwanted_value = "") {
-	$mysqli=MyDatabase();
 	if (isset($_POST["$x"]) && $_POST["$x"]!=$unwanted_value) {
 		$myVar=$_POST["$x"];
 	}

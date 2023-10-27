@@ -1,4 +1,5 @@
 <?php
+include "../klassen/db.php";
 include "../klassen/FUNCTIONS.php";
 include "../klassen/tutorials.php";
 

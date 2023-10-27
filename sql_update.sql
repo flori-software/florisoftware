@@ -1,0 +1,5 @@
+CREATE TABLE `d03e8079`.`tutorial` (`ID` INT NOT NULL AUTO_INCREMENT , `titel` VARCHAR(255) NOT NULL , `beschreibung` TEXT NOT NULL , `link_thumbnail` VARCHAR(255) NOT NULL , `link_youtube` VARCHAR(255) NOT NULL , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
+
+ALTER TABLE `tutorial` ADD `playlists` VARCHAR(100) NOT NULL AFTER `link_youtube`;
+
+CREATE TABLE `d03e8079`.`playlist` (`ID` INT NOT NULL AUTO_INCREMENT , `titel` VARCHAR(255) NOT NULL , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
