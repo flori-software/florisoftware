@@ -13,7 +13,7 @@ class playlists {
         
         // Lesen der einzelnen Tutorials
         foreach ($playlists as $playlist) {
-            $abfrage = "SELECT * FROM `tutorial` WHERE `playlists` LIKE '%".$playlist->ID."%'";
+            $abfrage = "SELECT * FROM `tutorial` WHERE `playlists` LIKE '%*".$playlist->ID."*%'";
             $objekt  = new tutorial;
             $playlist->tutorials = $db->lese_alle_eigenschaften(leeres_objekt: $objekt, sql_statement: $abfrage);
         }
@@ -36,6 +36,14 @@ class tutorial {
     public $beschreibung;
     public $link_thumbnail;
     public $link_youtube;
+
+    public static function get_tutorial($id) {
+        $tutorial = new tutorial;
+        $db      = new db;
+        $abfrage = "SELECT * FROM `tutorial` WHERE `ID`=".$id;
+        $antwort = $db->lese_alle_eigenschaften(leeres_objekt: $tutorial, sql_statement: $abfrage);
+        return $antwort;
+    }
 
 }
 
