@@ -23,7 +23,7 @@ onmouseout="f_change_pic(\''.$id_bild.'\', \'../pics/back.png\')"></a>
 echo '<div style="position: absolute; top: 100px;">
 <div style="text-align: center;">
 
-<iframe width="1200" height="675" src="'.$tutorial->link_youtube.'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1200" height="675" src="'.$tutorial->link_youtube.'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; hd720" allowfullscreen></iframe>
 </div>
 <p style="position: relative; left: 10%; width: 80%;">'.$tutorial->beschreibung.'</p>
 </div>';
