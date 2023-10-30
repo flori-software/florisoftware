@@ -19,7 +19,7 @@ class db {
             while($row = $result->fetch_object()) {
                 $neues_objekt = clone $leeres_objekt;
                 foreach($neues_objekt as $eigenschaft=>$wert) {
-                    if(!in_array(needle: $row, haystack: $ausgeschlossene_eigenschaften)) {
+                    if(!in_array(needle: $eigenschaft, haystack: $ausgeschlossene_eigenschaften)) {
                         $neues_objekt->$eigenschaft = $row->$eigenschaft;
                     }
                 }
